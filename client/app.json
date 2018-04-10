@@ -1,0 +1,43 @@
+{
+  "pages":[
+    "pages/explore/explore",   
+    "pages/index/index",
+    "pages/addCgi/addCgi",
+    "pages/detail/detail",
+    "pages/search/search",
+    "pages/profile/profile",
+    "pages/user/user"
+  ],
+  "tabBar": {
+    "color": "#999",
+    "selectedColor": "#1bc5bb",
+    "backgroundColor": "#fff",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/explore/explore",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/search/search",
+        "text": "搜索"
+      },
+      {
+        "pagePath": "pages/profile/profile",
+        "text": "用户"
+      }
+    ]
+  },
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#1bc5bb",
+    "navigationBarTitleText": "图赏册",
+    "navigationBarTextStyle": "#fff"
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}

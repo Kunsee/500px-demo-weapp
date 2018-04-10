@@ -1,0 +1,33 @@
+<!--explore.wxml-->
+<view class="container" style='height:100%;width:100%;position:fixed;'>
+    <scroll-view class='section photos' style="height: {{windowHeight}}" scroll-y="true" bindscrolltolower="loadMore" scroll-into-view="{{range}}" scroll-with-animation="true">
+        <swiper indicator-dots="{{indicatorDots}}"
+          autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" class="swiper" circular="true" id="top">
+          <block wx:for="{{imgUrls}}">
+            <swiper-item>
+              <image src="{{item}}" class="slide-image"/>
+            </swiper-item>
+          </block>
+        </swiper>
+        <view class="product">
+          <span class="product-text"> 首页推荐 </span>
+        </view>
+        <view class="photo-list">
+            <block wx:for="{{photos}}" wx:key="{{index}}">
+                <view class="photo-item" id="{{item.id}}" catchtap="lookPhoto">
+                    <image class="photo" src="{{item.images[0].url? item.images[0].url: '../../images/first.png'}}"></image>
+                </view>
+            </block>
+        </view>
+        <view class="load-more-wrap"  wx:if="{{initShow}}">
+            <block wx:if="{{hasMore}}">
+                <text class="weui-loading"/><text class="load-content">Loading...</text>
+            </block>
+            <block wx:else>
+                <view class="load-content"><text>No more...</text></view>
+            </block>
+        </view>
+    </scroll-view>
+    <view class="top index-circle" bindtap="backTop">Top</view>    
+    <view class="classify index-circle" bindtap="showFeatureOptions">分类</view>
+</view>

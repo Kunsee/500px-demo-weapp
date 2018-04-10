@@ -1,0 +1,62 @@
+/**explore.wxss**/
+.container {
+    align-items:flex-start;
+    overflow-y: auto;
+}
+.swiper{
+  margin-bottom: 10rpx;
+  position: relative;
+  height: 400rpx;
+}
+.slide-image{
+  width: 100%;
+  height: 400rpx;
+}
+.product{
+  width: 100%;
+  padding: 5rpx 0;
+  margin:  5rpx 0;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-text{
+  width: 90%;
+  padding: 10rpx 0;
+  background: #1bc5bb;
+  color: #fff;
+  border-radius: 10rpx;
+}
+
+.slide-image{
+  width: 100%;
+}
+
+.photo-list{
+  width:100%;
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.photo-item {
+  display: flex;
+  flex-direction: row;
+  padding:2rpx 0rpx;
+}
+
+.photo{
+  width:373rpx;
+  height:373rpx;
+  /* border-radius: 5rpx; */
+  background: #ffffff;
+}
+
+.classify{
+  position: fixed;
+  bottom: 20rpx;
+  left: 20rpx;
+}

@@ -1,0 +1,32 @@
+<!--search.wxml-->
+<loading hidden="{{!loading}}">
+    Loading
+</loading>
+
+<view class="container" style='height:100%;width:100%;position:fixed;'>
+    <scroll-view class='section editor' style="height: {{windowHeight}}" scroll-y="true" bindscrolltolower="loadMore"
+    scroll-into-view="{{range}}" scroll-with-animation="true">
+        <view class="search-bar" id="top">
+            <view class="search-bar-warper">
+                <icon type="search" size="16"/>
+                <input bindchange="search" placeholder="关键词"/>
+            </view>
+        </view>
+        <view class="photo-list">
+            <block wx:for="{{photos}}">
+                <view class="photo-item" id="{{item.id}}" catchtap="lookPhoto">
+                    <image class="photo" src="{{item.images[0].url}}"></image>
+                </view>
+            </block>
+        </view>
+        <view class="load-more-wrap" wx:if="{{initShow}}">
+            <block wx:if="{{hasMore}}">
+                <text class="weui-loading"/><text class="load-content">Loading...</text>
+            </block>
+            <block wx:else>
+                <view class="load-content"><text>没有更多了</text></view>
+            </block>
+        </view>
+    </scroll-view>
+    <view class="top index-circle" bindtap="backTop">Top</view>
+</view>
